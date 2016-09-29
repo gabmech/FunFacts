@@ -1,25 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FunFacts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahB-2b-Y6p">
+                                <rect key="frame" x="36" y="472" width="303" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Show Another fun fact"/>
+                                <connections>
+                                    <action selector="showFunFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="n8q-DH-76H"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Did you know" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDL-6b-BOo">
+                                <rect key="frame" x="20" y="53" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.49234913793103446" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0OG-gx-oyn">
+                                <rect key="frame" x="0.0" y="300" width="375" height="68"/>
+                                <string key="text">You are born with 300 bones; by the time you are an adult you will have 206. You are born with 300 bones; by the time you are an adult you will have 206.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.73333333333333328" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gDL-6b-BOo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="0X7-0M-HTQ"/>
+                            <constraint firstItem="0OG-gx-oyn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2DD-3y-bhh"/>
+                            <constraint firstItem="0OG-gx-oyn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="232" id="6eG-9y-hv7"/>
+                            <constraint firstItem="ahB-2b-Y6p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="8E9-ng-y72"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0OG-gx-oyn" secondAttribute="trailing" constant="20" id="9I0-qP-gZV"/>
+                            <constraint firstItem="0OG-gx-oyn" firstAttribute="top" secondItem="gDL-6b-BOo" secondAttribute="bottom" constant="120" id="Brz-iU-66k"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ahB-2b-Y6p" secondAttribute="bottom" constant="80" id="KlO-OM-RZQ"/>
+                            <constraint firstAttribute="trailing" secondItem="0OG-gx-oyn" secondAttribute="trailing" id="ObH-1c-J3T"/>
+                            <constraint firstItem="ahB-2b-Y6p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qfs-Hj-sOI"/>
+                            <constraint firstItem="0OG-gx-oyn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bnj-vQ-YfI"/>
+                            <constraint firstItem="0OG-gx-oyn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cRK-Df-evi"/>
+                            <constraint firstItem="0OG-gx-oyn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="gpW-LJ-zwA"/>
+                            <constraint firstItem="ahB-2b-Y6p" firstAttribute="top" secondItem="0OG-gx-oyn" secondAttribute="bottom" constant="36" id="jLL-LO-yla"/>
+                            <constraint firstItem="0OG-gx-oyn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tms-Yd-qSN"/>
+                            <constraint firstItem="gDL-6b-BOo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="vIF-gZ-hHI"/>
+                            <constraint firstItem="0OG-gx-oyn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vRV-02-tUZ"/>
+                            <constraint firstItem="0OG-gx-oyn" firstAttribute="centerX" secondItem="ahB-2b-Y6p" secondAttribute="centerX" id="xzy-YD-GxO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2DD-3y-bhh"/>
+                                <exclude reference="Brz-iU-66k"/>
+                                <exclude reference="ObH-1c-J3T"/>
+                                <exclude reference="cRK-Df-evi"/>
+                                <exclude reference="gpW-LJ-zwA"/>
+                                <exclude reference="vRV-02-tUZ"/>
+                                <exclude reference="xzy-YD-GxO"/>
+                                <exclude reference="jLL-LO-yla"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="funFactButton" destination="ahB-2b-Y6p" id="T8l-9V-X0W"/>
+                        <outlet property="funFactLabel" destination="0OG-gx-oyn" id="ds9-0h-S0Q"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="607.5" y="325.5"/>
         </scene>
     </scenes>
 </document>

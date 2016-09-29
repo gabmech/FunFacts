@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import GameKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var funFactButton: UIButton!
+    @IBOutlet weak var funFactLabel: UILabel!
+
+    let factModel = FactModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        funFactLabel.text = factModel.facts[0]
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +27,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showFunFact() {
+        let randomColor = ColorModel().getRandomColor()
+        view.backgroundColor=randomColor
+        funFactButton.tintColor=randomColor
+        funFactLabel.text = factModel.getRandomFact()
+        
+    }
 
 }
 
